@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>E-terview</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/grid.css" rel="stylesheet">
+  </head>
+
+  <body>
+     <div class="container">
+      <br><br><br>
+
+      <h1 class="cover-heading">Interview Topics</h1>
+      <br>
+      <h2 class="cover-heading">Select a Topic:</h2>
+
+        <form action="questions" method='POST'>
+          <select name="inputform">
+          {% for each in dropdown_list %}
+            <option value="{{each}}">{{each}}</option>
+          {% endfor %}
+          </select>
+          <button type="submit" class="btn btn-lg btn-secondary">See Questions</button>
+          <br><br><br><br><br><br>
+<!--           <a href="http://www.atlasobscura.com" class="btn btn-default btn-lg">About Atlas Obscura</a> -->
+        </p>
+
+    </div> <!-- /container -->
+ 
+  
+  
+  
+<!-- 
+    <div class="container">
+    {{result}}
+    </div> <!~~ /container ~~>
+ -->
+  </div> <!-- /.container-->
+
+    <div class="container">
+      <div class="starter-template">
+        <h3>Results:</h3>
+        <p class="lead">Below is the result of your query.<br> </p>
+      </div>
+
+      <table class="table table-hover">
+      <tr><th>Topics</th></tr>
+      {% for top in result['Topics'] %}
+      <tr><td>{{ top }}</td></tr>
+      {% endfor %}
+      </table>
+
+
+     </div><!-- /.container --> 
+  
+ 
+  </body>
+</html>
+
+
+

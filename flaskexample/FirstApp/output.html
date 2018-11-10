@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>E-terview</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/grid.css" rel="stylesheet">
+  </head>
+
+  <body>
+<!-- 
+    <div class="container">
+    {{result}}
+    </div> <!~~ /container ~~>
+ -->
+  </div> <!-- /.container-->
+
+    <div class="container">
+      <div class="starter-template">
+        <h3>Results:</h3>
+        <p class="lead">Below is the result of your query.<br> </p>
+      </div>
+
+      <table class="table table-hover">
+      <tr><th>Questions</th></tr>
+      {% for que in result['Questions'] %}
+      <tr><td>{{ que }}</td></tr>
+      {% endfor %}
+      </table>
+
+
+     </div><!-- /.container --> 
+  
+ 
+  </body>
+</html>
+
+
+
